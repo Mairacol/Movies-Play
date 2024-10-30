@@ -37,7 +37,7 @@ document.body.scrollTop = 0;
 
 
 function homePage() {
-  console.log('Home!!');
+ // console.log('Home!!');
 
 headerSection.classList.remove('header-container--long');
 headerSection.computedStyleMap.background = '';

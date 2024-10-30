@@ -123,8 +123,14 @@ button {
   animation-delay: .4s;
 }
 
-.movie-img {
+.genericList-container .movie-container .movie-img {
   border-radius: 8px;
+  height: 270px;
+    min-height: 270px;
+    max-height: 270px;
+    width: 170px;
+    min-width: 170px;
+    max-width: 170px;
 }
 
 .categoriesPreview-list, .categories-list {
