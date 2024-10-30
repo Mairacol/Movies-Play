@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 
 :root {
-  --purple-light-1: #fbfafbf0;
+  --purple-light-1: #FBFAFB;
   --purple-light-2: #EEEAF2;
   --purple-medium-1: #AA83C8;
   --purple-medium-2: #8B48BF;
@@ -123,14 +123,9 @@ button {
   animation-delay: .4s;
 }
 
-.genericList-container .movie-container .movie-img {
+.movie-img {
   border-radius: 8px;
-  height: 270px;
-    min-height: 270px;
-    max-height: 270px;
-    width: 170px;
-    min-width: 170px;
-    max-width: 170px;
+  min-height: 175px;
 }
 
 .categoriesPreview-list, .categories-list {

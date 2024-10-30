@@ -11,11 +11,10 @@ const api = axios.create({
 //Utils
 
 //Lazy Loader 
-
 const lazyLoader = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const url = entry.target.getAttribute('data-img')
+      const url = entry.target.getAttribute('data-img');
       entry.target.setAttribute('src', url);
     }
   });
@@ -33,12 +32,20 @@ function createMovies(movies, container, lazyLoad = false) {
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('movie-img');
-        movieImg.setAttribute('alt', movie.title);
-        movieImg.setAttribute(
+        movieImg.setAttribute('alt', movie.title);       
+         movieImg.setAttribute(
           lazyLoad ? 'data-img'  : 'src',
           'https://image.tmdb.org/t/p/w300' + movie.poster_path,
         );
+        movieImg.addEventListener('error', () =>{
+          movieImg.setAttribute(
+            'src',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyPlJYeaaddZSj2IOHJ-0L0oCAJFTycnAkWj09mDFeYpGpOU1axyLmVH0SkG_8mkR-x8&usqp=CAU'
+        );
+        });
+
     
+
         if (lazyLoad) {
           lazyLoader.observe(movieImg);
         }
@@ -76,7 +83,7 @@ location.hash = `#category=${category.id}-${category.name}`;
     const { data } = await api('trending/movie/day');
     const movies = data.results;
     
-createMovies(movies, trendingMoviesPreviewList);
+createMovies(movies, trendingMoviesPreviewList,true);
   }
   
   async function getCategegoriesPreview() {
@@ -95,7 +102,7 @@ createMovies(movies, trendingMoviesPreviewList);
     });
     const movies = data.results;
 
-    createMovies(movies, genericSection);
+    createMovies(movies, genericSection, true);
   }
   async function getMoviesBySearch(query) {
     const { data } = await api('/search/movie',{
@@ -105,7 +112,7 @@ createMovies(movies, trendingMoviesPreviewList);
     });
     const movies = data.results;
 
-    createMovies(movies, genericSection);
+    createMovies(movies, genericSection, true);
   }
 
   async function getTrendingMovies() {
