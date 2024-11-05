@@ -104,6 +104,7 @@ button {
 .movie-container {
   cursor: pointer;
   position: relative;
+  
 }
 .movie-container--loading {
   background: var(--purple-light-2);
@@ -126,7 +127,10 @@ button {
 
 .movie-img {
   border-radius: 8px;
-  min-height: 175px;
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Ajusta según el tamaño deseado */
+  margin: 0 auto; /* Centra la imagen */
 }
 
 .movie-btn {
@@ -150,6 +154,7 @@ button {
 }
 .movie-btn--liked::before {
   content: '💜';
+
 }
 
 .categoriesPreview-list, .categories-list {
@@ -329,7 +334,7 @@ button {
 
 .genericList-container .movie-container {
   display: inline-block;
-  width: 47.5%;
+
 }
 
 .genericList-container .movie-img {
@@ -439,5 +444,25 @@ footer {
   }
   50% {
     opacity: 0%;
+  }
+}
+/* Estilos específicos para dispositivos de escritorio */
+@media (min-width: 768px) {
+  .movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta el espacio entre las películas */
+  }
+
+  .movie-container .movie-img {
+    max-width: 200px; /* Ajusta según el tamaño deseado para pantallas grandes */
+    max-height: 300px; /* Ajusta para mantener una proporción adecuada */
+  }
+}
+
+@media (max-width: 768px) {
+  .genericList-container .movie-container {
+    width: 47.5%;
   }
 }
