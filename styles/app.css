@@ -222,6 +222,7 @@ button {
   justify-content: center;
   width: 100%;
   flex-wrap: nowrap;
+  margin-top: 20px;
 }
 
 .header-searchForm input {
@@ -230,6 +231,7 @@ button {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
+
 .header-searchForm button {
   width: 56px;
   height: 48px;
