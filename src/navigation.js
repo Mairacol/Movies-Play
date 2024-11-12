@@ -57,7 +57,7 @@ function homePage() {
  // console.log('Home!!');
 
 headerSection.classList.remove('header-container--long');
-headerSection.computedStyleMap.background = '';
+headerSection.style.background = '';
 arrowBtn.classList.add('inactive');
 arrowBtn.classList.remove('header-arrow--white');
 headerTitle.classList.add('inactive');
