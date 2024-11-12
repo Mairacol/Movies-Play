@@ -60,7 +60,7 @@ headerSection.classList.remove('header-container--long');
 headerSection.style.background = '';
 arrowBtn.classList.add('inactive');
 arrowBtn.classList.remove('header-arrow--white');
-headerTitle.classList.add('inactive');
+headerTitle.classList.remove('inactive');
 headerCategoryTitle.classList.add('inactive');
 searchForm.classList.remove('inactive');
 
