@@ -470,3 +470,12 @@ footer {
     width: 47.5%;
   }
 }
+footer i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+footer a {
+  color: #ffffff; /* Cambia el color según tu preferencia */
+  text-decoration: none;
+  font-weight: bold;
+}
