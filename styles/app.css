@@ -26,7 +26,10 @@
 }
 
 html {
-  background-color: var(--purple-medium-3);
+  background-color: white;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  scrollbar-width: thin; /* Scroll delgado */
+  scrollbar-color: #5C218A #EAEAEA; /* Color del pulgar y del fondo */
 }
 
 body {
@@ -263,7 +266,10 @@ button {
   height: 241px;
   padding-left: 24px;
   padding-bottom: 16px;
-}
+  scroll-behavior: smooth; 
+    scrollbar-width: thin; 
+    scrollbar-color: #5C218A #EAEAEA;  
+  }
 
 .trendingPreview-movieList .movie-container,
 .liked-movieList .movie-container {
@@ -397,11 +403,15 @@ button {
   width: calc(100vw - 24px);
   padding-bottom: 16px;
   max-height: 225px;
+  scroll-behavior: smooth; 
+  scrollbar-width: thin; 
+  scrollbar-color: #5C218A #EAEAEA;  
 }
 
 .relatedMovies-scrollContainer .movie-container {
   display: inline-block;
   margin-right: 8px;
+
 }
 
 .relatedMovies-scrollContainer .movie-container--loading {
@@ -419,7 +429,7 @@ button {
   max-width: 125px;
   height: 187.5px;
   min-height: 187.5px;
-  max-height: 187.5px;
+  max-height: 187.5px; 
 }
   
 
