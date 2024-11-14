@@ -147,6 +147,10 @@ button {
   margin: 0;
   z-index: 5;
 }
+.movie-btn:hover {
+  transform: scale(1.2); 
+  transition: 0.3s ease; 
+}
 .movie-btn::before {
   content: '🤍';
   /* font-size: 13px; */
@@ -257,7 +261,10 @@ button {
   height: 32px;
   width: 72px;
 }
-
+.trendingPreview-btn:hover {
+  transform: scale(1.2); 
+  transition: 0.3s ease; 
+}
 .trendingPreview-movieList,
 .liked-movieList {
   overflow-x: scroll;
