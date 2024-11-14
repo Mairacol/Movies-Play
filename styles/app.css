@@ -306,6 +306,13 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.category-title:hover {
+  transform: scale(1.2); 
+  transition: 0.3s ease; 
 }
 
 .category-title::before {
