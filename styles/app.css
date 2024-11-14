@@ -462,8 +462,6 @@ footer {
 .inactive {
   display: none;
 }
-
-
 /* Animations */
 @keyframes loading-skeleton {
   0%, 100% {
@@ -473,7 +471,6 @@ footer {
     opacity: 0%;
   }
 }
-
 /* Estilos específicos para dispositivos de escritorio */
 @media (min-width: 768px) {
   .movie-container {
@@ -482,7 +479,7 @@ footer {
     align-items: center;
     margin-bottom: 20px; /* Ajusta el espacio entre las películas */
   }
-
+  
   .movie-container .movie-img {
     max-width: 200px; /* Ajusta según el tamaño deseado para pantallas grandes */
     max-height: 300px; /* Ajusta para mantener una proporción adecuada */
